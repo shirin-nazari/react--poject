@@ -5,30 +5,42 @@ const Ul = styled.ul`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0px;
-  padding: 28px;
+  /* margin: 0px; */
+  /* padding: 28px; */
   list-style-type: none;
+
+  width: 400px;
   /* background-color: beige; */
 `;
-const Div = styled.div``;
+const Li = styled.li`
+  color: #f4eee8;
+  text-decoration: none;
+`;
+const Div = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0%;
+  padding: 30px;
+  width: auto;
+`;
 
 const navbar = () => {
   return (
     <Div>
       <Ul>
-        <li>
+        <Li>
           <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
+        </Li>
+        <Li>
           <NavLink to="/">AboutUs</NavLink>
-        </li>
-        <li>
+        </Li>
+        <Li>
           <NavLink to="/">ConcatUs</NavLink>
-        </li>
-        <li>
-          <Search />
-        </li>
+        </Li>
       </Ul>
+
+      <Search />
     </Div>
   );
 };
