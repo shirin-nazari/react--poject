@@ -1,17 +1,30 @@
+import styled from "styled-components";
+const Div = styled.input`
+  box-shadow: 20px;
+  border-radius: 20px;
+  width: 350px;
+  height: 40px;
+`;
+const Button = styled.button`
+  width: 60px;
+  height: 35px;
+  border-radius: 5px;
+  color: white;
+  background-color: #393e46;
+`;
 const search = () => {
   return (
-    <div className="input-group rounded">
-      <input
+    <form className="d-flex">
+      <Div
+        className="form-control m-2"
         type="search"
-        className="form-control rounded"
         placeholder="Search"
         aria-label="Search"
-        aria-describedby="search-addon"
       />
-      <span className="input-group-text border-0" id="search-addon">
-        <i className="fas fa-search"></i>
-      </span>
-    </div>
+      <Button className="btn btn-outline-success" type="submit">
+        Search
+      </Button>
+    </form>
   );
 };
 export default search;
