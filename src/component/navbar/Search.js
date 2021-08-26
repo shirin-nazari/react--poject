@@ -1,15 +1,18 @@
 import styled from "styled-components";
+/* ------------------------------ styled input ------------------------------ */
 const Div = styled.input`
   box-shadow: 20px;
   border-radius: 20px;
   width: 350px;
-  height: 40px;
+  /* height: 40px; */
 `;
+/* -------------------------------------------------------------------------- */
 const Button = styled.button`
-  width: 60px;
-  height: 35px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   color: white;
+  text-align: center;
+  width: 80px;
+  height: 50px;
   background-color: #393e46;
 `;
 const search = () => {
