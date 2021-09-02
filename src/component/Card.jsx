@@ -10,9 +10,11 @@ const Div=styled.div` background-color: beige;
 const card=()=>{
  return Data.map((value)=>{
    return (
-     <Div >
-     <div  style={{display:'flex',flexDirection:'row',justifyContent:'space-around', textAlign:'center'}}>
-<div className="card">
+     <Div key={value.id}>
+
+ 
+   
+ <div className="card" style={{width:'300px' , height:'90%' ,margin:'20px', padding:'10px',boxShadow:'5px 5px 10px 4px  #bebebe33'}}>
   <h5>{value.name}</h5>
   <img className="card-img-top" src={value.image.medium} alt="Card image cap" />
   <div className="card-body">
@@ -20,7 +22,8 @@ const card=()=>{
   </div>
 </div>
 
-</div></Div>
+ 
+</Div> 
     )
   
 })
