@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import styled from "styled-components";
 import Data from '../api/Data.json'
-const Div=styled.div` background-color: beige;
- /* display:flex ;
- flex-direction: row;
- justify-content: space-around;
- text-align: center; */
+const Div=styled.div` background-color:  #CEE5D0;
+;
+/* background-color: #E6DDC6; */
+
+
 `
 const card=()=>{
  return Data.map((value)=>{

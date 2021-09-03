@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Header = styled.div`
   width: 100vw;
   height: 100px;
-  background-color: beige;
+  background-color: #cee5d0;
   margin: 0px;
   padding: 0px;
 `;

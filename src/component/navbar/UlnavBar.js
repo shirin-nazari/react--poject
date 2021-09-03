@@ -1,9 +1,7 @@
-import { NavLink, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Search from "./Search";
-import Aboutus from "./Aboutus";
-import Login from "./Login";
-import card from "../Card";
+import "../App.css";
 const Ul = styled.ul`
   display: flex;
   flex-direction: row;
@@ -14,10 +12,7 @@ const Ul = styled.ul`
   width: 400px;
   /* background-color: beige; */
 `;
-const navlink = styled(NavLink)`
-  color: #0a0a0a;
-  text-decoration: none;
-`;
+
 const Div = styled.div`
   display: flex;
   flex-direction: row;
@@ -40,24 +35,22 @@ const navbar = () => {
 
       <Ul>
         <li>
-          <NavLink to="/" activeClassName="selected" exact>
+          <NavLink to="/" activeClassName="active" exact className="nav-link">
             Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Aboutus" activeClassName="selected">
+          <NavLink to="/Aboutus" activeClassName="active" className="nav-link">
             AboutUs
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Login" activeClassName="selected">
+          <NavLink to="/Login" activeClassName="active" className="nav-link">
             Login
           </NavLink>
         </li>
       </Ul>
-      {/* <Route path='/' component={}></Route>
-      <Route path="/Aboutus" component={Aboutus} />
-      <Route path="/Login" component={Login} /> */}
+
       <Search />
     </Div>
   );
