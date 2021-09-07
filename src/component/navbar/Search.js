@@ -1,4 +1,8 @@
+import React, { useState } from "react";
 import styled from "styled-components";
+import Card from "../Card";
+import Data from "../../api/Data.json";
+import card from "../Card";
 /* ------------------------------ styled input ------------------------------ */
 const Div = styled.input`
   box-shadow: 20px;
@@ -16,6 +20,18 @@ const Button = styled.button`
   background-color: #393e46;
 `;
 const search = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [input, setinput] = useState("");
+  const handleChangeInput = (e) => {
+    e.preventDefault();
+    setinput(e.target.value);
+    console.log(e.target.value);
+  };
+  if (input.length > 0) {
+    Data.filter((i) => {
+      return card.name.match(input);
+    });
+  }
   return (
     <form className="d-flex">
       <Div
@@ -23,6 +39,8 @@ const search = () => {
         type="search"
         placeholder="Search"
         aria-label="Search"
+        value={input}
+        onChange={handleChangeInput}
       />
       <Button className="btn btn-outline-success" type="submit">
         Search
